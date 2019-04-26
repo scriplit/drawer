@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
-import Layout from './Components/Layout';
+import Layout from './Components/AppLayout/Layout';
 import HomeIcon from '@material-ui/icons/Home';
 import LayersIcon from '@material-ui/icons/Layers';
 import CategoryIcon from '@material-ui/icons/Category';
 import ComputerIcon from '@material-ui/icons/Computer';
 import BusinessIcon from '@material-ui/icons/Business';
-import HomeView from './Components/HomeView';
-import EnvironmentsView from './Components/EnvironmentsView';
-import DatabasesView from './Components/DatabasesView';
-import ServersView from './Components/ServersView';
-import ServicesView from './Components/ServicesView';
+import HomeView from './Components/Views/HomeView';
+import EnvironmentsView from './Components/Views/EnvironmentsView';
+import DatabasesView from './Components/Views/DatabasesView';
+import ServersView from './Components/Views/ServersView';
+import ServicesView from './Components/Views/ServicesView';
 
 function App() {
 
