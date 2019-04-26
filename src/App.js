@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 import Layout from './Components/Layout';
 import HomeIcon from '@material-ui/icons/Home';
 import LayersIcon from '@material-ui/icons/Layers';
@@ -14,31 +15,39 @@ import ServicesView from './Components/ServicesView';
 
 function App() {
 
-  let appItems = [{
+  let appViews = [{
     text: 'Home',
     icon: <HomeIcon />,
-    content: <HomeView />
+    content: <HomeView />,
+    url: "/home"
   }, {
     text: 'Environments',
     icon: <LayersIcon />,
-    content: <EnvironmentsView />
+    content: <EnvironmentsView />,
+    url: "/env"
   },
   {
     text: 'Services',
     icon: <CategoryIcon />,
-    content: <ServicesView />
+    content: <ServicesView />,
+    url: "/svc"
   }, {
     text: 'Servers',
     icon: <ComputerIcon />,
-    content: <ServersView />
+    content: <ServersView />,
+    url: "/srv"
   }, {
     text: 'Databases',
     icon: <BusinessIcon />,
-    content: <DatabasesView />
+    content: <DatabasesView />,
+    url: "/db"
   }];
 
   return (
-    <Layout views={appItems} title="App Dashboard" version="1.0"/>
+    <BrowserRouter>
+      <Layout views={appViews} title="App Dashboard" version="1.0"/>
+    </BrowserRouter>
+    
   );
 }
 

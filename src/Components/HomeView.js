@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import {Paper, Typography} from '@material-ui/core';
+import { Paper, Typography } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 
 function HomeView(props) {
@@ -11,7 +12,7 @@ function HomeView(props) {
                     This is the home view.
                 </Typography>
                 <Typography component="p">
-                    The home view shows common shortcuts to apps and services.
+                    The home view shows common shortcuts to apps and <Link to="/svc">services</Link>.
                 </Typography>
             </Paper>
         </div>
